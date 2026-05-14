@@ -35,12 +35,12 @@ We don't claim to "detect AI." We surface the signals so the labour market repri
 
 | Phase | What | Status |
 |---|---|---|
-| 1 | Foundation: UI, APIs, wallet, judge runner | ✅ Shipped |
-| 2 | Anchor client + USDC + ER wrapper + Action/Blink + Replay + Radar + Stats | ✅ Shipped |
-| 3 | `anchor deploy` + on-chain settle round-trip | 🟡 Ready (you run it) |
-| 4 | Token-2022 credential mint + Walrus replay storage | ⏳ Next |
-| 5 | MagicBlock ER hot path + ZK-Compressed cohort batches | ⏳ Next |
-| 6 | Loom demos + final polish + submit (May 24) | ⏳ Next |
+| 1 | Foundation: UI, APIs, wallet, judge runner | [DONE] Shipped |
+| 2 | Anchor client + USDC + ER wrapper + Action/Blink + Replay + Radar + Stats | [DONE] Shipped |
+| 3 | `anchor deploy` + on-chain settle round-trip | [READY] Ready (you run it) |
+| 4 | Token-2022 credential mint + Walrus replay storage | [PENDING] Next |
+| 5 | MagicBlock ER hot path + ZK-Compressed cohort batches | [PENDING] Next |
+| 6 | Loom demos + final polish + submit (May 24) | [PENDING] Next |
 
 Live in your browser at `/status` once running.
 
@@ -147,7 +147,7 @@ forge/
 
 ## What's wired vs. what's deferred
 
-### ✅ Wired and real (no mocks, no stubs)
+### [DONE] Wired and real (no mocks, no stubs)
 
 - **Landing page** matches every spec from `design.md`: glass navbar, orb video with `mix-blend-screen` + `hue-rotate(-55deg) saturate(250%) brightness(1.2) contrast(1.1)`, Fustat + Inter typography, the spec'd CTA `rgba(0,132,255,0.8)` + inset highlight `0 4px 4px rgba(255,255,255,0.35)`, ambient blue glow blobs, 4.9/5 social proof badge with Forge orange stars, footer with `gap-[100px]` logos, `-webkit-font-smoothing: antialiased`. Plus animated `aurora-text`, `forge-shimmer`, `forge-float`, `forge-keystroke`, `forge-marquee`, `forge-pulse-ring` keyframes.
 - **Real Solana wallet integration** — Phantom, Solflare, Torus, Ledger via `@solana/wallet-adapter-*` against devnet `Connection`.
@@ -163,7 +163,7 @@ forge/
 - **`/status` diagnostics page** — live reads against the configured cluster: USDC mint check, Forge program existence check, ER endpoint check, phase status.
 - **Devops scripts** — `airdrop.sh` (loop airdrops to N SOL), `deploy.sh` (safe deploy with balance pre-flight), `seed-demo.sh` (populate the Arena for screenshots / Loom).
 
-### ⏳ Next-phase wire-up (clearly marked, not mocked)
+### [PENDING] Next-phase wire-up (clearly marked, not mocked)
 
 - **MagicBlock ER delegate/undelegate** — wrapper at [`lib/magicblock-er.ts`](src/lib/magicblock-er.ts) lazy-loads the SDK; `npm i @magicblock-labs/ephemeral-rollups-sdk` + `NEXT_PUBLIC_EPHEMERAL_RPC=…` flips the snapshot path from SSE → ER. Snapshot interface is identical.
 - **Token-2022 credential mint** — `settle_match` pays the winner; the `mint_credential` ix that produces a Token-2022 NFT with metadata pointer is ~80 lines of Anchor away.
@@ -179,7 +179,7 @@ forge/
 3. Scroll to **Live Demo** — type into the editor, watch the Human-Code Score climb and the SkillRadar polygon expand. Click **Simulate AI paste** — watch it collapse to red.
 4. Open `/arena` — connect Phantom (devnet). Click **Open match**. The match appears in the **Open** column for any other browser to join.
 5. Open the same URL in a second browser, connect a *different* devnet wallet, click **Join**. Both clients enter the live duel; you'll see the opponent's code stream over SSE.
-6. Click **Copy as Blink ↗** to grab the Solana Action URL — pasteable into any Dialect/Phantom-aware surface.
+6. Click **Copy as Blink** to grab the Solana Action URL — pasteable into any Dialect/Phantom-aware surface.
 7. Either player clicks **Submit & judge** — `node:vm` runs the hidden test suite, signs a verdict. The settled match appears in `/credentials/<wallet>`.
 8. Open `/arena/<id>/replay` — drag the scrub bar to watch the duel frame by frame.
 9. Open `/status` — see the system diagnostics flip green as you complete each phase.

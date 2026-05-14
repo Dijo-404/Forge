@@ -191,7 +191,7 @@ export default function ArenaPage() {
 
               {lastTxSig ? (
                 <p className="mt-3 rounded-lg bg-emerald-50 px-3 py-2 text-[13px] text-emerald-700">
-                  ✓ on-chain ·{" "}
+                  [on-chain] ·{" "}
                   <a href={explorerTx(lastTxSig)} target="_blank" rel="noreferrer" className="underline">
                     view tx
                   </a>

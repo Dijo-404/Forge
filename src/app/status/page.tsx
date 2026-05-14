@@ -105,12 +105,12 @@ export default function StatusPage() {
             Phase status
           </h3>
           <ul className="mt-3 space-y-2 text-[14px] text-[var(--color-ink-secondary)]">
-            <li>✅ Phase 1 — Foundation (UI, APIs, wallet, judge)</li>
-            <li>✅ Phase 2 — Anchor client, USDC, ER wrapper, Action endpoint, replay, radar, stats</li>
-            <li>{info?.programDeployed ? "✅" : "⏳"} Phase 3 — Anchor deploy + on-chain settle round-trip</li>
-            <li>⏳ Phase 4 — Token-2022 credential mint + Walrus replay storage</li>
-            <li>⏳ Phase 5 — MagicBlock ER hot path + ZK-Compressed cohort batches</li>
-            <li>⏳ Phase 6 — Loom demos + final polish + submit</li>
+            <li>[DONE] Phase 1 — Foundation (UI, APIs, wallet, judge)</li>
+            <li>[DONE] Phase 2 — Anchor client, USDC, ER wrapper, Action endpoint, replay, radar, stats</li>
+            <li>{info?.programDeployed ? "[DONE]" : "[PENDING]"} Phase 3 — Anchor deploy + on-chain settle round-trip</li>
+            <li>[PENDING] Phase 4 — Token-2022 credential mint + Walrus replay storage</li>
+            <li>[PENDING] Phase 5 — MagicBlock ER hot path + ZK-Compressed cohort batches</li>
+            <li>[PENDING] Phase 6 — Loom demos + final polish + submit</li>
           </ul>
         </GlassPanel>
       </section>

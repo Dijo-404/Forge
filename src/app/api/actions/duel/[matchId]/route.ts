@@ -44,7 +44,7 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ matchId: st
     {
       type: "action",
       icon: `${origin}/og/duel/${matchId}.png`,
-      title: `⚔️ ${problem?.title ?? match.problemId}`,
+      title: `[DUEL] ${problem?.title ?? match.problemId}`,
       description:
         `Accept this Forge duel. Stake ${match.stakeUsdc} USDC. Race a peer to solve the problem on-chain — winner takes the pot, both mint a Proof-of-Skill credential.`,
       label: `Stake ${match.stakeUsdc} USDC & duel`,

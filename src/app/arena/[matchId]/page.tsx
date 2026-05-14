@@ -206,7 +206,7 @@ export default function MatchPage() {
                 className="rounded-[14px] border border-black/10 bg-white/60 px-4 py-2.5 text-sm font-medium text-[var(--color-ink-primary)] hover:bg-white"
                 title="Solana Action / Blink endpoint — paste in any X post"
               >
-                Copy as Blink ↗
+                Copy as Blink
               </button>
             ) : null}
           </div>
@@ -262,7 +262,7 @@ export default function MatchPage() {
               className="text-[28px] font-bold tracking-[-0.03em] text-[var(--color-ink-primary)]"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              {verdict.passed ? "✓ Verdict: PASS" : "✗ Verdict: FAIL"}
+              {verdict.passed ? "[PASS]" : "[FAIL]"}
             </h3>
             <p className="mt-2 text-[14px] text-[var(--color-ink-secondary)]">
               {verdict.testsPassed}/{verdict.testsTotal} tests passed in{" "}

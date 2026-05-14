@@ -139,7 +139,7 @@ function SuccessCard({ bountyId }: { bountyId: string }) {
         className="text-[28px] font-bold tracking-[-0.03em] text-emerald-700"
         style={{ fontFamily: "var(--font-display)" }}
       >
-        ✓ Bounty live on devnet
+        [BOUNTY POSTED] Bounty live on devnet
       </h3>
       <p className="mt-3 text-[14px] text-[var(--color-ink-secondary)]">
         Bounty id <span className="font-mono">{bountyId}</span>. Devs can now match the
